@@ -38,3 +38,6 @@ TBA
 ### COMMUNITY PIPELINES
 
 Apart from maintaining in-house pipelines, Genomics Platform supports use of [snakePipes](https://snakepipes.readthedocs.io/en/latest/) and [nf-core](https://nf-co.re/) pipelines. There is a [dangpu-specific profile](https://github.com/nf-core/configs/blob/master/docs/ku_sund_dangpu.md) available for nf-core pipelines. 
+
+
+Go back to the [Genomics Platform home](https://sundgenomics.github.io)
