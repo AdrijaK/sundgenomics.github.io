@@ -3,16 +3,16 @@
 
 ### DEMULTIPLEX
 
-Demultiplexing pipeline converts raw images (.bcl) into .fastq files according to samplesheet provided by the user. 
+Demultiplexing pipeline converts raw images (.bcl) into .fastq.gz files according to samplesheet provided by the user. 
 - Inputs: raw .bcl files and a sample sheet  
-- Outputs: .fastq files, multiQC report  
+- Outputs: .fastq.gz files, multiQC report  
 - Software used: bcl2fasta, multiQC  
 
 ![demux pipeline](/images/f01_demultiplex.pdf)
 ### RNAseq
 
-RNAseq pipeline aligns reads in .fastq to a specified reference genome
-- Inputs: .fastq files, a reference genome  
+RNAseq pipeline aligns reads in .fastq.gz to a specified reference genome.
+- Inputs: .fastq.gz files, a reference genome  
 - Outputs: indexed, sorted .bam files, read counts in .tsv format  
 - Software used: STAR, multiQC  
 
@@ -20,8 +20,8 @@ RNAseq pipeline aligns reads in .fastq to a specified reference genome
 
 ### CHORseq
 
-CHORseq pipeline aligns reads in .fastq to a specified reference genome, using dm-6 as spike-in
-- Inputs: .fastq files, a reference genome  
+CHORseq pipeline aligns reads in .fastq.gz to a specified reference genome, using dm6 as spike-in.
+- Inputs: .fastq.gz files, a reference genome  
 - Outputs: indexed, sorted .bam files  
 - Software used: bowtie2, samtools, picard, multiQC, custom scripts  
 
@@ -29,7 +29,11 @@ CHORseq pipeline aligns reads in .fastq to a specified reference genome, using d
 
 ### ATACseq
 
-TBA
+ATACseq pipeline aligns reads in .fastq.gz to a specified reference genome (human GRCh38, mouse mm10, fly dmel-all-chromosome-r6.27). Blacklisted regions and reads mapped to mtDNA are also removed. 
+
+- Inputs: .fastq.gz files, a reference genome
+- Outputs: indexed, sorted .bam files, .bw files
+- Software used: cutadapt, fastQC, bowtie2, samtools, picard, bedtools, bamCoverage
 
 ### CHIPseq
 
