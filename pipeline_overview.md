@@ -35,6 +35,7 @@ ATACseq pipeline aligns reads in .fastq.gz to a specified reference genome (huma
 - Outputs: indexed, sorted .bam files, .bw files
 - Software used: cutadapt, fastQC, bowtie2, samtools, picard, bedtools, bamCoverage
 
+![ATAC pipeline](/images/f04_ATAC.pdf)
 ### CHIPseq
 
 TBA
